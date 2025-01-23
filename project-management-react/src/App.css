@@ -1,0 +1,87 @@
+
+/*NAvbar styling */
+.navbar-main-container{
+   background-image: linear-gradient(to right, rgb(119, 66, 63) 0%,rgb(197, 111, 247) 20%,rgba(86, 57, 86, 0.447) 40%, rgb(119, 66, 63));
+}
+.navbar-main-container-onScroll
+{
+
+   background-image: linear-gradient(to right, rgba(104, 73, 73, 0.825) 0%,rgba(143, 72, 237, 0.578) 50%, rgba(104, 73, 73, 0.825));
+}
+ 
+
+/*Home Page fist container styling */
+.home-background
+{
+   /* background-image: linear-gradient(to right, rgb(153, 153, 231) 0%,rgba(143, 72, 237, 0.984) 50%, rgb(153, 153, 231)); */
+   
+   /* main  */
+   /* background-image: linear-gradient(to right, rgba(104, 73, 73, 0.825) 0%,rgba(143, 72, 237, 0.578) 50%, rgba(104, 73, 73, 0.825)); */
+   background-image: linear-gradient(to right, rgba(181, 143, 227, 0.652) 0%,rgba(156, 105, 162, 0.822) 20%,rgba(176, 141, 222, 0.822) 50%,rgba(156, 105, 162, 0.822) 70%, rgba(181, 143, 227, 0.652)); 
+}
+
+.card-container
+{
+ border: none;
+ background: transparent;
+ background: rgba(0, 0, 0, 0.367);
+}
+.project-card-container
+{
+   /* border: none; */
+   background: transparent;
+   background: rgba(0, 0, 0, 0.919);
+}
+
+#img-container-1
+{
+   background-image: url("../../public/bg-7.png");
+   background-size:contain;
+   background-repeat: no-repeat;
+}
+#img-container-2
+{
+background-image: url("../../public/bg-5.png");
+background-size:contain;
+background-repeat: no-repeat;
+
+}
+#img-container-3
+{
+   background-image: url("/bg-6.png");
+   background-size:contain;
+   background-repeat: no-repeat;
+   background-position-x: center; 
+}
+#img-container-4
+{
+   background-image: url("/Frame1.png");
+   background-size:contain;
+   background-repeat: no-repeat;
+   background-position-x: center; 
+}
+#img-container-5
+{
+   background-image: url("/projectImg-2.png");
+   background-size:contain;
+   background-repeat: no-repeat;
+   background-position-x: center; 
+   
+}
+#img-container-6
+{
+   background-image: url("/projectImg-3.png");
+   background-size:contain;
+   background-repeat: no-repeat;
+   background-position-x: center; 
+   
+}
+.main-container-content h1
+{
+   text-shadow: "5px 5px 4px red";
+}
+.overlay
+{
+   background-image: linear-gradient(62deg,rgba(0, 0, 0, 0.399), rgba(221, 154, 154, 0.492)),
+   linear-gradient(-62deg,rgba(0, 0, 0, 0.399), rgba(221, 154, 154, 0.492));
+}
