@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
 import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input";
-import { yupResolver } from "@hookform/resolvers/yup";
 import { Button } from "@/components/ui/button";
 import { Form, FormField, FormItem, FormControl } from "@/components/ui/form";
 import { useDispatch, useSelector } from "react-redux";

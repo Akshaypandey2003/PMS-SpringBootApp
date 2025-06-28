@@ -5,7 +5,6 @@ import java.util.Collections;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.lang.Nullable;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -16,8 +15,6 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-
-import jakarta.servlet.http.HttpServletRequest;
 
 @Configuration
 @EnableWebSecurity
@@ -41,7 +38,7 @@ public class AppConfig {
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
-        
+
         CorsConfiguration config = new CorsConfiguration();
 
         config.setAllowedOrigins(
@@ -49,6 +46,7 @@ public class AppConfig {
                         "http://localhost:5454",
                         "http://localhost:3000",
                         "http://localhost:5173",
+                        "http://localhost:5174",
                         "http://localhost:4200",
                         " https://fe9b-203-192-204-162.ngrok-free.app")); // Allowed origins
 

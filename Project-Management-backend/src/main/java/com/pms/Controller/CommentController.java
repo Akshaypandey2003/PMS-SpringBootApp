@@ -32,7 +32,7 @@ public class CommentController
     private UserService userService;
 
     //---------- Create comment handler ------------------
-    @PostMapping()
+    @PostMapping
     public ResponseEntity<Comment> createComment(
         @RequestBody CreateCommentRequest createCommentRequest,
         @RequestHeader("Authorization")String jwtToken) throws Exception

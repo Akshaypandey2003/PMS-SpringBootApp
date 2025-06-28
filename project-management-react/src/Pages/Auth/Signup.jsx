@@ -1,10 +1,8 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Form, FormField, FormItem, FormControl } from '@/components/ui/form';
-import { yupResolver } from '@hookform/resolvers/yup';
 import { useDispatch, useSelector } from "react-redux";
 import { register } from "@/Redux/Auth/Action";
 import * as Yup from "yup";
@@ -29,6 +27,7 @@ const loginValidationSchema = Yup.object().shape({
   .matches(/[@$!%*?&#]/, "Password must contain at least one special character")
   .required("Password is required"),
 });
+
 export const Signup = () => {
   const dispatch = useDispatch();
   const form = useForm({
@@ -49,8 +48,6 @@ export const Signup = () => {
 
 
   return (
-
-   
     <div>
         <h1 className="text-2xl font-semibold text-center pb-5 font-sans">Register with us</h1>
       <Form {...form}>

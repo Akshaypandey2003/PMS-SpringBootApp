@@ -44,11 +44,10 @@ export const CreateProjectForm = () => {
   const handleTagsChange=(item)=>
   {
     const currentTags = form.getValues("tags");
-
     const updatedTags = currentTags.includes(item)?currentTags.filter((tag) => tag !== item):[...currentTags,item];
     form.setValue("tags",updatedTags);
-
   }
+  
   return (
     
     <div>
