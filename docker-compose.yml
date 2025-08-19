@@ -1,0 +1,66 @@
+version: "3.8"
+services:
+  springboot:
+    build: ./Project-Management-backend
+    container_name: pms-spring-backend
+    environment:
+      SERVER_PORT: 5454
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      MYSQL_DB: projectmanager
+      MYSQL_USER: root
+      MYSQL_PASSWORD: Akhil@2003
+    ports:
+      - "5454:5454"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - pms-net
+
+  frontend:
+    build: ./project-management-react
+    container_name: react-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - springboot
+    networks:
+      - pms-net
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: Akhil@2003
+      MYSQL_DATABASE: projectmanager
+    ports:
+      - "3307:3306"   # external:internal
+    networks:
+      - pms-net
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-pAkhil@2003"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: Akhil@2003
+    ports:
+      - "8081:80"
+    networks:
+      - pms-net 
+    depends_on:
+      - mysql
+
+networks:
+  pms-net:
+    driver: bridge
