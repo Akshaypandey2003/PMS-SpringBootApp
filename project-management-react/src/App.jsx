@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-vars */
 
 import { Route, Routes } from "react-router-dom";
-import { Button } from "./components/ui/Button";
 import Home from "./Pages/Home/Home";
 import Navbar from "./Pages/NavBar/Navbar";
 import ProjectList from "./Pages/ProjectList/ProjectList";
